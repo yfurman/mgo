@@ -45,14 +45,11 @@ webapp for mgo
  
     mvn clean install -DskipTests
     
-    Note: you don't have to skip the tests, however, you should change the values to your own before running them. For example,
-    in the DirectoryServiceImplTest the path /Users/eugenefurman/Documents might not exist on your hard drive.
+    Note: you don't have to skip the tests, however, you should change the values to your own before running them. For example, in the DirectoryServiceImplTest the path /Users/eugenefurman/Documents might not exist on your hard drive.
     
- 5. The mgo database contains User collection. Please run UserDaoImplTest.testAddUser(), changing username, password, role, and gender
-    to different values in order to insert unique users. My program does not enforce username to be unique since this is not a production
-    application, however, it should handle attempts to insert duplicate users.
+ 5. The mgo database contains User collection. Please run UserDaoImplTest.testAddUser(), changing username, password, role, and gender to different values in order to insert unique users. My program does not enforce username to be unique since this is not a production application, however, it should handle attempts to insert duplicate users.
     
- 6. Run the following command to deploy war file to your <tomcat_home>/webapps directory.
+ 6. Run the following command to deploy built war file to your <tomcat_home>/webapps directory. Rename the war to mgo.war.
  
  7. Start tomcat.
  
@@ -79,7 +76,5 @@ webapp for mgo
     
        - http://localhost:8080/mgo/authenticate.jsp
        
-       Please enter username and password in the text fields (left to right), then click authenticate. Clicking on authenticate button
-       generates ajax post request that sends json data consisting of username/password. This json object is mapped to the
-       AuthParams Java object annotated by RequestBody in the UserController.
+       Please enter username and password in the text fields (left to right), then click authenticate. Clicking on authenticate button generates ajax post request that sends json data consisting of username/password. This json object is mapped to the AuthParams Java object annotated by RequestBody in the UserController.
        
