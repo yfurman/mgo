@@ -29,10 +29,10 @@ public class UserDaoImplTest {
 	
 	@Test
 	public void testAddUser() {
-		AuthParams auth = new AuthParams("emp2", "pass1234");
+		AuthParams auth = new AuthParams("emp3", "pass1234");
 		User user = new User();
 		user.setAuth(auth);
-		user.setRole("vendor");
+		user.setRole("client");
 		user.setGender("male");
 		
 		userDao.addUser(user);
